@@ -1,5 +1,4 @@
 let image = document.querySelectorAll('img');
-let text = document.querySelectorAll('h3');
 
  const addActiveClass = (e) =>{
          removeActiveClass();
