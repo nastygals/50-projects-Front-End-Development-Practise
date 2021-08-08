@@ -1,61 +1,51 @@
-//add class to element that has been activated 
-// activated by click button 
-// click on Prev line turns a diff colour 
+const slider = document.getElementById('slider');
+const prev= document.getElementById('Prev')
+const next= document.getElementById('Next')
+
+const circles = document.querySelectorAll('.listEl')
+const lines = document.querySelectorAll('.line');
 
 
-// declare variables 
-// add Event listeners to button 
-// if all bars are of the same colour prev / next button cannot be clicked 
-/*
-click on next 
-find which number is not blue 
-turns the number blue
+// get position of counter
 
-click on previous 
-same thing 
+let currentActive = 1;
+// press next when the counter is less than the total amount of elements 
 
-
-find which number is not blue :: check css border-stylings??
-research 
-
-*/
-const getStyle = (element) =>{
-    getComputedStyle(element).borderColor;
-}
-
-const pBtn = document.getElementById('Prev')
-const nBtn = document.getElementById('Next');
-
-const one = document.querySelector('one')
-const two = document.querySelector('two')
-const three = document.querySelector('three')
-const four = document.querySelector('four')
-
-const lines = document.querySelectorAll('.line')
-const l1 = document.querySelector('line1')
-const l2 = document.querySelector('line2')
-const l3 = document.querySelector('line3')
- 
-const getPosition = () =>{
-    if( lines.forEach(line =>{
-        getStyle(line) == '#3498db';
-    })){
-        nBtn.classList.add('off');
-    }else if(lines.forEach(line =>{
-        let counter = 0; 
-        if(getStyle(line) == '#3498db'){
-            counter++
-        }
-        if(counter == 1){
-            pBtn.classList.add('off')
-        }
-    })){
+// only then allow prev to be active, elements that are less than the counter are active 
+prev.addEventListener('click', () =>{
+    if(currentActive < 1){
+        currentActive = 1;
     }
+    update()
+});
+
+next.addEventListener('click', () =>{
+    if(currentActive > 1){
+        currentActive == circles.length;
+    }
+    update()
+});
+
+const update = () =>{
+    addOrRemove(circles);
+    addOrRemove(lines);
+    if (currentActive  == 1){
+        prev.disabled = true;
+    } else if( currentActive == circles.length){
+        next.disabled = true; 
+    }else{
+        prev.disabled = false;
+        next.disabled = false;
+    }
+
+}
+const addOrRemove = (element) =>{
+    element.forEach((element,idx) =>{
+        if(idx < currentActive ){
+            element.classList.add('active');
+        } else{
+            element.classList.remove('active');
+        }
+    })
 }
 
-/*
-basic cases: 
-
-all colours are blue 
-only one colour is blue 
-*/
