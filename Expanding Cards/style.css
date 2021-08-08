@@ -60,5 +60,5 @@ body{
 
 /*when active the element grows to 5 transition when clicked */
 img.active{
-    flex:5;
+    visibility:hidden;
 }

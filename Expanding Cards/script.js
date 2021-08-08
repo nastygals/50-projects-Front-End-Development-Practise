@@ -1,9 +1,8 @@
-
- let image = document.querySelectorAll('img');
+let image = document.querySelectorAll('img');
 
  const addActiveClass = (e) =>{
          removeActiveClass();
-         e.target.classList.addActiveClass('active')
+         e.target.classList.add('active');
      }
  
  const removeActiveClass = () =>{
@@ -13,6 +12,5 @@
  }
  
  image.forEach(i =>{
-     i.addEventListener('click', addActiveClass());
+     i.addEventListener('click', addActiveClass);
  })
- 
