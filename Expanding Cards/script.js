@@ -1,4 +1,5 @@
 let image = document.querySelectorAll('img');
+let text = document.querySelectorAll('h3');
 
  const addActiveClass = (e) =>{
          removeActiveClass();
@@ -14,3 +15,5 @@ let image = document.querySelectorAll('img');
  image.forEach(i =>{
      i.addEventListener('click', addActiveClass);
  })
+
+  

@@ -16,21 +16,20 @@ set transition for active element
     color:white;
 }
 
-html{
-    height:100vh;
-}
 
 body{
     min-height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
+    margin: 30px;
 }
 
 .container{
     display:flex;
     min-height:90vh;
-    width:90vw;
+    width:85vw;
+    /*! margin: 30px; */
 }
 
 .scrn{
@@ -54,11 +53,11 @@ body{
     max-width:100%;
     min-height:100%;
     object-fit:cover;
-    transition: flex 0.7s ease-in;
+    transition: max-width 0.7s ease-in;
     cursor:pointer;
 }
 
 /*when active the element grows to 5 transition when clicked */
 img.active{
-    visibility:hidden;
+    max-width:none;
 }
