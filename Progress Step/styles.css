@@ -72,3 +72,8 @@ body{
     cursor:pointer;
 }
 
+button.disabled {
+    cursor:no-drop;
+    color:#999;
+    background-color:#999;
+}

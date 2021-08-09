@@ -39,6 +39,7 @@ const update = () =>{
     }
 
 }
+
 const addOrRemove = (element) =>{
     element.forEach((element,idx) =>{
         if(idx < currentActive ){
