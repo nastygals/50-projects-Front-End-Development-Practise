@@ -1,1 +1,47 @@
+*{
+    text-decoration: none;
+    border:none;
+    list-style: none;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    background-color: #fafafa;
+}
 
+.circle-container{
+    position:fixed;
+    top:-100px;
+    left:-100px;  
+}
+
+.circle{
+    width:200px;
+    height:200px;
+    position:fixed;
+    
+    border-radius:200px;
+    position:relative;
+
+    background-color:#ff7979
+}
+#close{
+    color:#fff;
+    position:absolute;
+    z-index:2;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    margin: 8em 3em 5em 2em;
+}
+
+p,h3,h1{
+    margin-bottom:10px;
+}
+
+img + p{
+    margin-top:10px;
+}
