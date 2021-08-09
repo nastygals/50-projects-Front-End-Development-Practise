@@ -3,6 +3,7 @@
     font-size: 15px;
     margin:0;
     box-sizing: border-box;
+    border-color:#999;
 }
 
 html{
@@ -76,4 +77,15 @@ button.disabled {
     cursor:no-drop;
     color:#999;
     background-color:#999;
+}
+
+.active{
+    transition: border-color 0.5s ease-in;
+}
+
+li.active{
+    border-color:#3498db;
+}
+.line.active{
+    border-color:#3498db;
 }
