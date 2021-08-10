@@ -24,18 +24,31 @@
     border-radius:200px;
     position:relative;
 
-    background-color:#ff7979
+    background-color:#ff7979;
+
 }
-#close{
-    color:#fff;
+.circle button#close{
+    transform:rotate(90deg);
+    transform-origin: top left;
+}
+
+
+.circle button{
+    color:white;
+    cursor:pointer;
+    background-color:transparent;
     position:absolute;
-    z-index:2;
+    top:50%;
+    left:60%;
+    border: 0;
+    font-size:26px;
+    height:100px;
 }
 
 .content{
     display:flex;
     flex-direction: column;
-    margin: 8em 3em 5em 2em;
+    margin: 6em 3em 5em 3em;
 }
 
 p,h3,h1{
