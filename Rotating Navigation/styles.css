@@ -6,8 +6,30 @@
     padding:0;
     box-sizing:border-box;
 }
-.container{
+
+html{
     background-color: #fafafa;
+}
+
+body{
+    margin:0;
+    overflow-x:hidden;
+    background-color:#333;
+}
+
+.container{
+    padding:50px;
+    margin-bottom:90px;
+    background-color: #fafafa;
+    width:100vw;
+    min-height:100vh;
+}
+.container.show-nav{
+    transform:rotate(-20deg);
+
+}
+.container.show-nav .circle{
+    transform:rotate(-70deg);
 }
 
 .circle-container{
@@ -21,12 +43,13 @@
     height:200px;
     position:fixed;
     
-    border-radius:200px;
+    border-radius:50%;
     position:relative;
 
     background-color:#ff7979;
 
 }
+
 .circle button#close{
     transform:rotate(90deg);
     transform-origin: top left;
@@ -34,7 +57,7 @@
 
 
 .circle button{
-    color:white;
+    color:#fafafa;
     cursor:pointer;
     background-color:transparent;
     position:absolute;
@@ -48,7 +71,8 @@
 .content{
     display:flex;
     flex-direction: column;
-    margin: 6em 3em 5em 3em;
+    padding-top:50px;
+    background-color:#fafafa;
 }
 
 p,h3,h1{
@@ -57,4 +81,25 @@ p,h3,h1{
 
 img + p{
     margin-top:10px;
+}
+
+.nav{
+    position: fixed;
+    bottom:40px;
+    left: 0;
+    z-index: 100;
+}
+
+li.listItem{
+    color:#fafafa;
+    padding:2px;
+}
+
+li.listItem:hover{
+    color:#ff7979;
+    cursor:pointer;
+}
+
+i{
+    padding:3px;
 }
