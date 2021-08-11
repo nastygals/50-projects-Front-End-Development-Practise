@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    margin:0;
+}
+body{
+    font-family: 'Lato',sans-serif;
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+.container{
+    box-sizing:border-box;
+    min-height:100vh;
+}
+
+.container button{
+    border-style: none;
+    font-size:30px;
+    background-color:transparent;
+}
+
+.circle-container ~ *{
+    padding:40px;
+}
+
+.circle-container{
+    position:fixed;
+    z-index:100;
+    top:-100px;
+    left:-100px;
+}
+
+.circle{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-color:#ff7979;
+}
+
+p,
+h1,
+h3,
+img{
+    margin-top:10px;
+}
+
+.content img{
+    max-width:100%;
+    height:auto;
+}
+
+/*
+close button rotated 
+set button color 
+
+set body background color and container 
+*/

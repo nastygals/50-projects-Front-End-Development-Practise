@@ -47,10 +47,15 @@ body{
     position:relative;
 
     background-color:#ff7979;
+    transition:transform 0.5s linear;
 
+}
+.circle button#open{
+    left:60%;
 }
 
 .circle button#close{
+    left:60%;
     transform:rotate(90deg);
     transform-origin: top left;
 }
@@ -82,17 +87,27 @@ p,h3,h1{
 img + p{
     margin-top:10px;
 }
-
 .nav{
     position: fixed;
     bottom:40px;
     left: 0;
     z-index: 100;
 }
+.container.show-nav + nav li{
+    transform:translateX(0);
+    transition-delay:0.3s;
+
+}
+
+.nav ul li{
+    margin: 40px 0;
+    transform:translateX(-100%);
+    transition:transform 0.4s ease-in;
+}
 
 li.listItem{
     color:#fafafa;
-    padding:2px;
+    padding-left:10px;
 }
 
 li.listItem:hover{
@@ -103,3 +118,10 @@ li.listItem:hover{
 i{
     padding:3px;
 }
+
+/*
+heights relative units 
+so that container = body = html = viewport
+
+change font-family import 
+*/
