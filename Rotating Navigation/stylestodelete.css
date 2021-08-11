@@ -9,17 +9,31 @@ body{
     margin:0;
     padding:0;
     border:0;
+    background-color: #ff7979;
 }
 
 .container{
     box-sizing:border-box;
     min-height:100vh;
+    background-color: antiquewhite;
+    padding-top:50px;
+
 }
+/*
+what do the %s mean in translateX
+Check and compare the added css again to .nav translateX + display
+transition types ease-in/ out, etc.
+*/
+
 
 .container button{
     border-style: none;
     font-size:30px;
     background-color:transparent;
+}
+
+.container button i{
+    color:#fafafa;
 }
 
 .circle-container ~ *{
@@ -33,11 +47,44 @@ body{
     left:-100px;
 }
 
+.container.show-nav .circle{
+    transition:transform 0.35s ease-in;
+    transform: rotate(-90deg);
+}
+
 .circle{
     width:200px;
     height:200px;
     border-radius:50%;
     background-color:#ff7979;
+}
+
+.circle button{
+    position:absolute;
+    z-index:200;
+    
+    width:200px;
+    height:200px;
+
+    top:20%;
+    left:20%;
+
+}
+
+.show-nav button#open{
+    transform:scaleX(0.3);
+    
+}
+
+.circle button#close{
+    left:80%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.circle button i{
+    cursor:pointer;
+    text-align:center;
 }
 
 p,
@@ -52,9 +99,18 @@ img{
     height:auto;
 }
 
-/*
-close button rotated 
-set button color 
+.nav{
+    transform:translateX(-100%);
+    /*Check again*/
+    display:none;
+}
 
-set body background color and container 
-*/
+.nav ul li{
+    list-style: none;
+    text-transform: uppercase;
+    padding-top:5px;
+}
+
+.nav ul li i{
+    padding-right:5px;
+}
