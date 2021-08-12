@@ -9,7 +9,7 @@ body{
     margin:0;
     padding:0;
     border:0;
-    background-color: #ff7979;
+    background-color: #ff7979ce;
 }
 
 .container{
@@ -19,12 +19,6 @@ body{
     padding-top:50px;
 
 }
-/*
-what do the %s mean in translateX
-Check and compare the added css again to .nav translateX + display
-transition types ease-in/ out, etc.
-*/
-
 
 .container button{
     border-style: none;
@@ -45,6 +39,11 @@ transition types ease-in/ out, etc.
     z-index:100;
     top:-100px;
     left:-100px;
+}
+
+.container.show-nav{
+    transform-origin: top left;
+    transform:rotate(-20deg);
 }
 
 .container.show-nav .circle{
@@ -87,6 +86,10 @@ transition types ease-in/ out, etc.
     text-align:center;
 }
 
+.content{
+    max-width:80%;
+    margin:auto;
+}
 p,
 h1,
 h3,
@@ -99,16 +102,41 @@ img{
     height:auto;
 }
 
+.nav.nav-slide{
+    display:block;
+}
+
+.nav-slide li:nth-child(1){
+    transition:transform 0.35s ease-in;
+    transform:translateX(95%);
+}
+.nav-slide li:nth-child(2){
+    transition:transform 0.35s ease-in;
+    transform:translateX(100%);
+}
+
+.nav-slide li:nth-child(3){
+    transition:transform 0.35s ease-in;
+    transform:translateX(105%);
+}
+
+
 .nav{
     transform:translateX(-100%);
-    /*Check again*/
     display:none;
+    left:0;
+    position:fixed;
+    bottom:60px;
+    z-index:100;
 }
 
 .nav ul li{
     list-style: none;
     text-transform: uppercase;
-    padding-top:5px;
+    padding:20px;
+    font-size:20px;
+    color:#fafafa;
+    
 }
 
 .nav ul li i{
