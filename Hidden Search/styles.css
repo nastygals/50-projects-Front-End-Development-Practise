@@ -17,31 +17,32 @@ body{
     align-items:center;
 }
 
-.search button{
+div.search{
     display:flex;
     justify-content:space-between;
     align-items: center;
     padding:11px 16px 11px 16px;
     background-color:#fafafa;
+}
+
+.search > *{
+     background-color:#fafafa;
+}
+.search button{
     cursor:pointer;
-    min-width:auto;
 }
 
 .search button:focus{
     outline:none;
 }
 
-.search.show-bar .search{
-    transition: min-width 0.35s ease-in;
-    min-width:5vw;
-    margin:auto;
-}
-
-.search button input{
+.search input{
     display:none;
     outline:none;
 }
 
-.search.show-bar button input{
+.search.show-bar input{
     display:inline-block;
+    transition:width 0.35s ease-in;
+    width: 200px;
 }

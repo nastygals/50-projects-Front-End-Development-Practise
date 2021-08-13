@@ -1,5 +1,5 @@
 const searchContainer = document.querySelector('.search');
-const selectI = document.querySelector('.click');
+const selectBtn = document.querySelector('.click');
 
 // add class to button so that when clicked it shows the
 const addOrRemove = () =>{
@@ -10,4 +10,4 @@ const addOrRemove = () =>{
     }
 }
 
-selectI.addEventListener('click', addOrRemove);
+selectBtn.addEventListener('click', addOrRemove);
