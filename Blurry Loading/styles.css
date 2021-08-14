@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.bg{
+    height:100%;
+    width:100%;
+    background-image:url('https://www.nme.com/wp-content/uploads/2019/06/GettyImages-88429765.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    position:absolute;
+    filter:blur(0px);
+}
+
+.loading-text{
+    position:relative;
+    font-size:50px;
+    color:#fafafa;
+}
