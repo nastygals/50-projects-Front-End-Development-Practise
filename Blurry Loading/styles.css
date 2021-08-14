@@ -11,16 +11,16 @@ body{
     justify-content:center;
     overflow:hidden;
 }
-.bg{
-    height:100%;
-    width:100%;
-    background-image:url('https://www.nme.com/wp-content/uploads/2019/06/GettyImages-88429765.jpg');
-    background-size:cover;
-    background-position:center center;
-    background-repeat: no-repeat;
-    position:absolute;
-    filter:blur(0px);
-}
+
+.bg {
+        background-image:url('https://www.nme.com/wp-content/uploads/2019/06/GettyImages-88429765.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position: center center;
+        height:100%;
+        width:100%;
+        position:absolute;
+  }
 
 .loading-text{
     position:relative;
