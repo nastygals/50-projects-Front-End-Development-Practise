@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    background-color:rgba(211, 247, 127, 0.89);
+}
+
+.content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:24px;
+    background-color:rgba(211, 247, 127, 0.89);
+    border:rgba(211, 247, 127, 0.589);
+}
