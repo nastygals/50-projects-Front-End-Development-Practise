@@ -3,11 +3,12 @@
     box-sizing:border-box;
     padding:0;
     font-size:2rem;
+    overflow-x:hidden;
 }
 
 body{
     min-height:100vh;
-    background-color:rgba(211, 247, 127, 0.89);
+    background-color:rgba(144, 199, 17, 0.356);
 }
 
 .container{
@@ -20,31 +21,25 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    
-    background-color:rgba(211, 247, 127, 0.041);
-    border:rgba(211, 247, 127, 0.589);
+
     color:rgba(26, 36, 2, 0.692);
-    border: 2px solid rgba(211, 247, 127, 0.24);
     border-radius:10px;
     background-image:linear-gradient(217deg, rgba(211, 247, 127, 0.89), rgba(224, 226, 100, 0.897) 70.71%),
     linear-gradient(127deg, rgb(211, 247, 127), rgb(18, 27, 155) 70.71%),
     linear-gradient(336deg, rgb(187, 175, 108), rgba(32, 147, 167, 0.336) 70.71%);
     padding:100px;
+    transform:translateX(-400%);
+    transition: transform 0.4s ease;
 }
 
 .content + .content{
     margin-top:15px;
 }
 
-.content:nth-child(even){
-    transform:translateX(100%);
-}
-
-.content:nth-child(odd){
-    transform:translateX(-100%);
+.content:nth-of-type(even){
+    transform:translateX(400%);
 }
 
 .content.show{
-    transition: transform 0.2s ease-in;
     transform: translateX(0);
 }
