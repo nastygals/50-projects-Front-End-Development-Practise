@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    margin:0;
+    box-sizing:border-box;
+    font-size:32px;
+    text-transform: uppercase;
+    color:#fafafa;
+}
+
+body{
+    height:100%;
+}
+
+.container{
+    background-color:black;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.text-display{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:10px;
+}
+
+span.displayText{
+    color:rgb(255, 255, 255);
+    padding:3px;
+}
+span.displayText2{
+    padding:2px;
+}
+.container p span.cursor{
+    width:3px;
+    background-color:#ccc;
+    animation:blink 2s infinite;   
+}
+.container p span.cursor.typing{
+    animation:none;
+}
+
+@keyframes blink{
+    0%{
+        color:#fafafa;
+    }
+    49%{
+        color:transparent;
+    }
+    50%{
+        color:#fafafa;
+    }
+    99%{
+        color:transparent;
+    }
+    100%{
+        color: #fafafa;
+    }
+}
