@@ -1,5 +1,5 @@
 
-const injectText = ['This','animation','is','really','cool'];
+const injectText = ['Recording my coding journey','Daily Uploads', 'Simple front-end path' ];
 const display = document.querySelector('.displayText2');
 const cursor = document.querySelector('.cursor');
 
