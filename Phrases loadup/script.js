@@ -15,7 +15,7 @@ function type(){
         arrayTextIndex = 0; 
         charIndex = 0
         setTimeout(type,newWordDelay);
-    }
+    } else{
     if (charIndex < injectText[arrayTextIndex].length){
         if(!cursor.classList.contains('typing')){
             cursor.classList.add('typing');
@@ -25,8 +25,9 @@ function type(){
 
         setTimeout(type,typeTime);
     } else{
-        setTimeout(erase,eraseTime);
+        setTimeout(erase,eraseTime + 200);
     }
+}
 }
 
 function erase(){
