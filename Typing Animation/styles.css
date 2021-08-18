@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    background: linear-gradient(180deg, rgba(2,34,10,1) 6%, rgba(75,176,26,1) 55%, rgba(0,255,213,1) 100%); 
+    background-color: black;
     min-height:100vh;
     display:flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ body{
 }
 
 span.displayText{
-    color:rgba(2,34,10,1);
+    color:rgb(115, 250, 149);
     padding:3px;
 }
 
@@ -39,7 +39,7 @@ span.displayText2{
 
 .container p span.cursor{
     width:3px;
-    background-color:rgba(2,34,10,1);
+    background-color:rgb(115, 250, 149);
     animation:blink 1s infinite;   
 }
 
