@@ -5,7 +5,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Rampart One', cursive;
-    overflow:hidden; 
+    overflow:visible; 
 }
 
 body{
@@ -20,6 +20,7 @@ p{
     font-family:serif;
     text-transform:uppercase;
     font-size:1.5rem;
+    font-weight:normal;
 }
 
 /*
@@ -41,20 +42,34 @@ p{
     flex:1 1 100%;
 }
 
+.container .subContain {
+    height: -100vh;
+}
+
 .container .slide .text{
     display:flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     justify-content:center;
+    text-align:center;
+
     min-height:100vh;
-    min-width:30vw;
+    width:30%;
     padding: 50px;
     background-color:lightgrey;
+
+    position:relative;
 }
 
+.container .slide .text .button{
+    top:40%;
+    margin-left:auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 
-.slide .image{
-    min-width:80vw;
+.container .slide .image{
+    min-width:70%;
     position:relative;
 }
 
@@ -64,9 +79,9 @@ p{
     min-height:100%;
 }
 
-.symbol{
+.button{
     position:absolute;
-    top:60%;
+    top:46%;
     left:0;
     right:0;
     bottom:0;
@@ -75,32 +90,18 @@ p{
     height:56.35px;
     padding: 0 20px 0 20px;
     border-style: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     color:rgba(0, 0, 0, 0.404);
 }
-.symbol p{
+.button p{
     font-size:2em;
 }
 
-.symbol:hover{
+.button:hover{
     cursor:pointer;
     color:rgb(0, 0, 0);
 }
 
-.image .symbol{
+.image .button{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-}
-
-.text h1{
-    position:relative;
-}
-
-.text .symbol{
-    position:absolute;
-    top:40%;
-    left:20em;
-    right:0;
-    bottom:0;
 }
