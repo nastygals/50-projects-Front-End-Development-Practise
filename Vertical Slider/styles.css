@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Rampart One', cursive;
+    overflow:hidden; 
+}
+
+body{
+    min-height:100vh;
+}
+
+h1{
+    font-size:2.5rem;
+}
+
+p{
+    font-family:serif;
+    text-transform:uppercase;
+    font-size:1.5rem;
+}
+
+/*
+1. Container with class active occupies the full height and width 
+2. Each container is divided through the middle with img at the right and 
+
+*/
+
+/*General container*/
+.container{
+    min-height:100vh;
+}
+
+.container .slide{
+    display:flex;
+}
+
+.container .slide > *{
+    flex:1 1 100%;
+}
+
+.container .slide .text{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:100vh;
+    min-width:30vw;
+    padding: 50px;
+    background-color:lightgrey;
+}
+
+
+.slide .image{
+    min-width:80vw;
+    position:relative;
+}
+
+.slide .image img{
+    object-fit:cover;
+    min-width:100%;
+    min-height:100%;
+}
+
+.symbol{
+    position:absolute;
+    top:60%;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:999;
+    width:62.8px;
+    height:56.35px;
+    padding: 0 20px 0 20px;
+    border-style: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color:rgba(0, 0, 0, 0.404);
+}
+.symbol p{
+    font-size:2em;
+}
+
+.symbol:hover{
+    cursor:pointer;
+    color:rgb(0, 0, 0);
+}
+
+.image .symbol{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.text h1{
+    position:relative;
+}
+
+.text .symbol{
+    position:absolute;
+    top:40%;
+    left:20em;
+    right:0;
+    bottom:0;
+}
